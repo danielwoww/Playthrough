@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- falling tiles -->
+    <path android:fillColor="#FFFF9A3C" android:pathData="M41,26h10a2,2 0,0 1,2 2v18a2,2 0,0 1,-2 2h-10a2,2 0,0 1,-2 -2v-18a2,2 0,0 1,2 -2z" />
+    <path android:fillColor="#FF6F8BFF" android:pathData="M57,34h10a2,2 0,0 1,2 2v10a2,2 0,0 1,-2 2h-10a2,2 0,0 1,-2 -2v-10a2,2 0,0 1,2 -2z" />
+    <!-- rail -->
+    <path android:fillColor="#FF9CC4F0" android:pathData="M28,50h52v2h-52z" />
+    <!-- white keys -->
+    <path android:fillColor="#FFFFFFFF" android:pathData="M29,54h11v26h-11z M41,54h11v26h-11z M53,54h11v26h-11z M65,54h14v26h-14z" />
+    <path android:fillColor="#FFFFC08A" android:pathData="M41,54h11v26h-11z" />
+    <!-- black keys -->
+    <path android:fillColor="#FF1A1B20" android:pathData="M36,54h7v15h-7z M49,54h7v15h-7z M61,54h7v15h-7z M73,54h6v15h-6z" />
+</vector>

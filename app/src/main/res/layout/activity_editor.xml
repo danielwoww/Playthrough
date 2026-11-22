@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF15161C"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="6dp">
+
+        <TextView android:id="@+id/backBtn" style="@style/Chip" android:text="‹ Back" />
+        <TextView android:id="@+id/playBtn" style="@style/Chip" android:text="▶ Play" />
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:paddingStart="4dp"
+            android:paddingEnd="8dp"
+            android:singleLine="true"
+            android:textColor="#FFFFFFFF"
+            android:textSize="15sp" />
+
+        <!-- scrolls sideways on narrow screens so the buttons never get squeezed -->
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView android:id="@+id/undoBtn" style="@style/Chip" android:text="Undo" />
+                <TextView android:id="@+id/redoBtn" style="@style/Chip" android:text="Redo" />
+                <TextView android:id="@+id/modeBtn" style="@style/Chip" android:text="+ Add" />
+                <TextView android:id="@+id/handBtn" style="@style/Chip" android:text="Right" />
+                <TextView android:id="@+id/gridBtn" style="@style/Chip" android:text="Grid 1" />
+                <TextView android:id="@+id/instrumentBtn" style="@style/Chip" android:text="🎹 Grand piano" />
+                <TextView android:id="@+id/zoomOutBtn" style="@style/Chip" android:text="-" android:textSize="18sp" />
+                <TextView android:id="@+id/zoomInBtn" style="@style/Chip" android:text="+" android:textSize="18sp" />
+                <TextView android:id="@+id/fitBtn" style="@style/Chip" android:text="Fit" />
+                <TextView android:id="@+id/saveBtn" style="@style/Chip" android:layout_marginEnd="0dp" android:background="@drawable/chip_bg_active" android:text="Save" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.playthrough.app.PianoRollView
+            android:id="@+id/roll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/selectionBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/panel_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/selInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="6dp"
+                android:paddingEnd="12dp"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp" />
+            <TextView android:id="@+id/shorterBtn" style="@style/Chip" android:text="- Shorter" />
+            <TextView android:id="@+id/longerBtn" style="@style/Chip" android:text="+ Longer" />
+            <TextView android:id="@+id/selHandBtn" style="@style/Chip" android:text="Swap hand" />
+            <TextView android:id="@+id/deleteBtn" style="@style/Chip" android:text="Delete" android:textColor="#FFFF8A95" />
+            <TextView android:id="@+id/deselectBtn" style="@style/Chip" android:layout_marginEnd="0dp" android:text="✕" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
